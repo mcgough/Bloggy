@@ -1,0 +1,38 @@
+  <div class="row">
+    <h2 class='text-center'>Welcome to Bloggy</h2>
+    <!-- <button ng-click='reloadPosts()' type="button" class="waves-effect waves-light btn green center"><i class="glyphicon glyphicon-refresh"></i></button> -->
+    <div class="col-sm-10 col-sm-offset-1 text-center">
+
+          <a href='/post' type="button" class="waves-effect waves-light btn green" ng-if='currentUser'><i>Add a Bloggy</i></a>
+        <div class="card z-depth-5">
+        <div class="card-content black-text">
+         <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Created</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr ng-repeat='post in posts'>
+              <td>{{post.title}}</td>
+              <td>{{post.userId}}</td>
+              <td><em>{{post.createdAt | date: 'short'}}</em></td>
+              <td ng-if='post.userId === currentUser.id'><button ng-click='deletePost(post.id)' type="button" class="waves-effect waves-light btn red"><i class='mdi-content-cut'></i></button></td>
+              <td><a ng-href='/post/{{post.id}}' type="button" class="waves-effect waves-light btn blue"><i class='mdi-action-visibility'></i></a></td>
+            </tr>
+
+          </tbody>
+        </table>
+        </div>
+        </div>
+
+
+    </div>
+<!--     <div class="col-sm-4">
+      <h3>Right Side</h3>
+      Left Side
+    </div> -->
+  </div>

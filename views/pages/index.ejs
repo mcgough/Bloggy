@@ -1,0 +1,43 @@
+<div ng-app='BloggyApp'>
+<!--   <nav ng-controller='NavCtrl' class=' light-blue darken-1'>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">Bloggy</a>
+      <ul id="mobile-demo" class="side-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href='#' ng-click='showLogin()' ng-hide="currentUser">LogIn</a></li>
+
+        <li><a href='/signup' ng-hide='currentUser'>SignUp</a></li>
+        <li><a href='#' ng-click='userLogOut()' ng-show="currentUser">LogOut | {{currentUser.firstName || 'User'}}</a></li>
+      </ul>
+    </div>
+  </nav> -->
+      <nav ng-controller='NavCtrl' class='light-blue darken-1'>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo center">Bloggy</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+           <ul id="right" class="left hide-on-med-and-down">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href='#' ng-click='showLogin()' ng-hide="currentUser">LogIn</a></li>
+
+            <li><a href='/signup' ng-hide='currentUser'>SignUp</a></li>
+            <li><a href='#' ng-click='userLogOut()' ng-show="currentUser">LogOut | {{currentUser.firstName || 'User'}}</a></li>
+          </ul>
+         <ul id="mobile-demo" class="side-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href='#' ng-click='showLogin()' ng-hide="currentUser">LogIn</a></li>
+
+          <li><a href='/signup' ng-hide='currentUser'>SignUp</a></li>
+          <li><a href='#' ng-click='userLogOut()' ng-show="currentUser">LogOut | {{currentUser.firstName || 'User'}}</a></li>
+        </ul>
+        </div>
+      </nav>
+
+  <alerts></alerts>
+  <div class="container" ng-app='BloggyApp'>
+    <ng-view></ng-view>
+  </div>
+</div>
+

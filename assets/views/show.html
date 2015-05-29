@@ -1,0 +1,35 @@
+<!-- <h2>Post!!!</h2> -->
+<div class='row'>
+<div class='col-sm-8 col-sm-offset-2'>
+<h4 class='text-center'>{{post.title}}</h4>
+<p>{{post.body}}</p>
+<hr>
+
+<form ng-submit='addComment()' ng-hide='!currentUser'>
+<!--   <legend>Add Comment</legend> -->
+  <div class="input-field">
+    <div class="form-group">
+     <!--  <label class="control-label" for="">label</label> -->
+      <span class="help-block"></span>
+      <textarea ng-model='commentText' class="materialize-textarea" id="" placeholder="Create New Comment"></textarea>
+      </div>
+    </div>
+
+    <button type="submit" class="btn">Submit</button>
+  </form>
+
+  <div ng-if="!currentUser">
+    <h5 class='text-center'>LogIn to leave a comment.</h5>
+  </div>
+<!--     <ul class="collection with-header" ng-repeat='comment in post.comments'>
+
+      <li class="collection-item"><em>{{comment.createdAt | date: 'short'}}</em><br>{{comment.body}}</li>
+
+    </ul> -->
+    <div ng-repeat='comment in post.comments' class='card z-depth-5'>
+      <div class='card-content white-black'>
+        <p><em>{{comment.createdAt | date: 'short'}}</em><br>{{comment.body}}</p>
+      </div>
+    </div>
+</div>
+</div>

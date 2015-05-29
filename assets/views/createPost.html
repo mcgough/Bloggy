@@ -1,0 +1,13 @@
+<h2 class='center'>New Post</h2>
+<hr>
+<form ng-submit='createPost()'>
+  <div class="input-field">
+    <div class="form-group">
+      <span class="help-block"></span>
+      <input ng-model='post.title' type="text" class="form-control" id="" placeholder="Title">
+      <textarea ng-model='post.body' type="text" class="materialize-textarea" id="" placeholder="Blog Post"></textarea>
+    </div>
+  </div>
+
+  <button type="submit" class="btn">Submit</button>
+</form>
